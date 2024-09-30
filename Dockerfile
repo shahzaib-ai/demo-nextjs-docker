@@ -19,9 +19,6 @@ RUN \
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
-
-ENV NEXT_PRIVATE_STANDALONE true
-
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
